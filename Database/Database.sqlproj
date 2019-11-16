@@ -56,5 +56,25 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Tables\AspNet" />
+    <Folder Include="dbo\Tables\Company" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AspNet\AspNetUserTokens.sql" />
+    <Build Include="dbo\Tables\Company\Department.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AspNet\__EFMigrationsHistory.sql" />
+    <Build Include="dbo\Tables\AspNet\AspNetRoleClaims.sql" />
+    <Build Include="dbo\Tables\AspNet\AspNetRoles.sql" />
+    <Build Include="dbo\Tables\AspNet\AspNetUserClaims.sql" />
+    <Build Include="dbo\Tables\AspNet\AspNetUserLogins.sql" />
+    <Build Include="dbo\Tables\AspNet\AspNetUserRoles.sql" />
+    <Build Include="dbo\Tables\AspNet\AspNetUsers.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Database.refactorlog" />
   </ItemGroup>
 </Project>

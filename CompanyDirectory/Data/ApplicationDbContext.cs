@@ -8,6 +8,7 @@ namespace CompanyDirectory.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        DbSet<Department> Department { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
